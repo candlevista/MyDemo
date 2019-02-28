@@ -1,0 +1,28 @@
+//
+//  PrefixHeader.pch
+//  MyDemo
+//
+//  Created by ClariS on 2019/2/28.
+//  Copyright © 2019年 ClariS. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#ifdef __OBJC__
+#import <ReactiveCocoa/ReactiveCocoa.h>
+#ifdef weakify
+#undef weakify
+#endif
+#ifdef strongify
+#undef strongify
+#endif
+#import <Masonry/Masonry.h>
+#import <YYKit/YYKit.h>
+#import "ICUtilsMarco.h"
+#import "UITableViewCell+ICAddition.h"
+#import "ICBlock.h"
+#import "UIColor+ICColor.h"
+#endif
+
+#endif /* PrefixHeader_pch */
