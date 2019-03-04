@@ -44,7 +44,7 @@
                     }
                         break;
                     case 1:     // 满减券
-                        amount -= coupon.reduceMoney;
+                        amount  -= coupon.reduceMoney;
                         amount = amount < 0 ? 0 : amount;
                         break;
                     default:
@@ -65,6 +65,7 @@
                 switch (self.couponModel.type) {
                     case 1:     // 满减券
                         if (amount < self.couponModel.thresholdAmount) {
+                            // 总价低于优惠券最低额度，清除优惠券
                             self.couponModel = nil;
                         }
                         break;

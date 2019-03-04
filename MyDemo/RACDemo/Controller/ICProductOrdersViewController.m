@@ -61,17 +61,6 @@
     RAC(self.bottomBar.couponLabel, attributedText) = RACObserve(self.model, offAmount);
 }
 
-- (NSArray *)filterCouponWithAmount:(CGFloat)amount originDatas:(NSArray *)originDatas {
-    for (ICMyCouponModel *ele in originDatas) {
-        if (ele.type == 1) {
-            if (amount < ele.thresholdAmount) {
-                ele.disable = YES;
-            }
-        }
-    }
-    return originDatas;
-}
-
 #pragma mark - action
 
 - (void)doneAction:(id)sender {

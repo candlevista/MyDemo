@@ -133,7 +133,6 @@
 
 - (void)initBind {
     RAC(self.rightTopLabel, text) = RACObserve(self, model.selectTime);
-    RAC(self.rightBottomLabel, text) = RACObserve(self, model.selectTimeDescription);
 }
 
 - (void)setModel:(ICOrdersCellTimeModel *)model {
@@ -289,6 +288,11 @@
             [self.minusBtn setImage:[UIImage imageNamed:@"ic_minus_g_14x14"] forState:UIControlStateNormal];
         } else {
             [self.minusBtn setImage:[UIImage imageNamed:@"ic_minus_g_sel"] forState:UIControlStateNormal];
+        }
+        if (x.integerValue >= self.model.maxCount) {
+            [self.plusBtn setImage:[UIImage imageNamed:@"ic_plus_b_nor"] forState:UIControlStateNormal];
+        } else {
+            [self.plusBtn setImage:[UIImage imageNamed:@"ic_plus_b_14x14"] forState:UIControlStateNormal];
         }
     }];
 }

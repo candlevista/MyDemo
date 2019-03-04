@@ -14,7 +14,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic, assign) BOOL disable;                 ///< 是否禁用：false：不禁用，true禁用
 @property (nonatomic, assign) NSInteger coupon_id;          ///< 活动id
-@property (nonatomic, assign) NSInteger discount;           ///< 折扣值
+@property (nonatomic, assign) NSInteger discount;           ///< 折扣值，8折就返回8
 @property (nonatomic, assign) CGFloat discountUpLimit;      ///< 折扣上限
 @property (nonatomic, assign) NSInteger ID;                 ///< 优惠券id
 @property (nonatomic, copy) NSString *name;                 ///< 活动名称
