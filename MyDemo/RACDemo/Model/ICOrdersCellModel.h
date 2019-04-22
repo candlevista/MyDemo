@@ -16,7 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *title;            ///< 产品名
 @property (nonatomic, copy) NSString *content;          ///< 产品描述
 @property (nonatomic, copy) NSString *price;            ///< 价格
-@property (nonatomic, copy) NSString *selector;
+//@property (nonatomic, copy) NSString *selector;
 
 @end
 

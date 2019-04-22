@@ -85,7 +85,7 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     NSArray *ary = self.datas[indexPath.section];
     id <ICMultipleCellModelProtocol>model = ary[indexPath.row];
-    if (model.selector.length) {
+    if ([model respondsToSelector:@selector(selector)] && model.selector.length) {
         SEL selector = NSSelectorFromString(model.selector);
         [self performSelector:selector];
     }
